@@ -239,7 +239,11 @@
         <div id="music-container" class="music-container">
             <button class="music-button" onclick="playMusic()">Play Music</button>
             <!-- Ganti sumber audio dengan file di laptop Anda -->
-            <audio id="background-music" src="https://zigzag1140.github.io/orang-pelit/hbd.mp3" loop></audio>
+            <audio id="background-music" loop>
+                <source src="https://zigzag1140.github.io/orang-pelit/hbd.mp3" type="audio/mpeg">
+                <source src="https://zigzag1140.github.io/orang-pelit/hbd.ogg" type="audio/ogg">
+                Your browser does not support the audio element.
+            </audio>
         </div>
     </div>
 
@@ -288,7 +292,11 @@
         function playMusic() {
             const music = document.getElementById('background-music');
             if (music.paused) {
-                music.play();
+                music.play().then(() => {
+                    console.log("Music is playing");
+                }).catch(error => {
+                    console.error("Error playing music:", error);
+                });
             } else {
                 music.pause();
             }
