@@ -231,9 +231,9 @@
     <!-- Halaman Welcome -->
     <div id="welcome-page" class="hidden">
         <div class="welcome-container">
-            <h2>Apa kamu siap?</h2>
-            <button onclick="showEnvelope()">Siap</button>
-            <button onclick="showEnvelope()">Siap Banget</button>
+            <h2>apa kamu ezza?</h2>
+            <button onclick="showEnvelope()">benar</button>
+            <button onclick="showEnvelope()">sama aja cuman di bawah</button>
         </div>
         <!-- Tombol Musik di Bagian Bawah -->
         <div id="music-container" class="music-container">
@@ -252,10 +252,10 @@
         <div class="flex flex-col items-center">
             <div id="message-container" class="hidden">
                 <article id="message">
-                    Untuk Ria,<br>
-                    Ndk tau mau bilang apa, intinya hbd ya.
+                    hbd ezza,<br>
+                    udah itu aja...
                 </article>
-                <div class="continue-link" onclick="window.open('https://berita.99.co/contoh-ucapan-selamat-ulang-tahun/', '_blank')">
+                <div class="continue-link" onclick="window.open('https://www.liputan6.com/feeds/read/5757465/600-kata-kata-ucapan-ulang-tahun-yang-menyentuh-hati', '_blank')">
                     lanjutkan...
                 </div>
             </div>
@@ -269,7 +269,7 @@
         // Fungsi untuk mengecek password
         function checkPassword() {
             const password = document.getElementById('password').value;
-            if (password === "15022005") {
+            if (password === "25032005") {
                 // Langsung pindah ke halaman selanjutnya tanpa alert
                 document.getElementById('login-page').classList.add('hidden');
                 document.getElementById('welcome-page').classList.remove('hidden');
